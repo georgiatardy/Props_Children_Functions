@@ -1,12 +1,15 @@
+import React, { Component } from 'react';
+
 
 class ChildComponent extends Component {
   render() {
     return (
-      <div>Dumb Component receiving Props
-        <div>
-          <input type="submit" onClick={this.props.onClick}/>
-        </div>
-      </div>
+      <button type="submit" className="submit_button"
+      onClick={this.props.onClick}>Submit</button>
+
+
     );
   }
 }
+
+export default ChildComponent

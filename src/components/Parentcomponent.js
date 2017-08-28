@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 
+import ChildComponent from '../components/Childcomponent.js';
+import DisplayComponent from '../components/Displaycomponent.js';
 
 class ParentComponent extends Component {
   constructor(props){
@@ -19,7 +21,7 @@ this.handleSubmit=this.handleSubmit.bind(this);
     e.preventDefault();
     //set the state on input change
     let whatToSay = e.target.value
-    this.setState({whatToSay: this.state.whatToSay});
+    this.setState({whatToSay: whatToSay});
   }
   handleSubmit(e) {
     e.preventDefault();
@@ -33,18 +35,17 @@ this.handleSubmit=this.handleSubmit.bind(this);
   }
   render() {
     return (
-      <div className="">
-      <form action="">
-        <div className="form">
-          <input onChange={this.handleInput} type="text" className="form" placeholder="Write Something Here" />
+      <div className="col-8">
+          <form action="">
+            <div className="form-group">
+              <input onChange={this.handleInput} type="email" className="form-control" aria-describedby="text input" placeholder="Write something!"/>
+            </div>
+            <ChildComponent onClick={this.handleSubmit}/>
+          </form>
+          <DisplayComponent sayWhat={this.state.whatWasSaid}/>
         </div>
-        <div>
-          <ChildComponent onClick={this.handleSubmit}/>
-          <DisplayComponent sayWhat={this.state.whatWasSaid} />
-        </div>
-      </div>
     );
   }
 }
 
-export default Parentcomponent
+export default ParentComponent
