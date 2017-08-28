@@ -2,23 +2,36 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.navBar {
+  background-color: olive;
   color: white;
+  height: 60px;
+  width: 75%;
+  margin: 20px;
+  margin-left: 130px;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
 }
 
-.App-intro {
-  font-size: large;
+div.column{
+  background-color: #784B12;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.footer {
+  background-color: olive;
+  height: 60px;
+  width: 75%;
+  margin: 20px;
+  margin-left: 130px;
+
+}
+
+.form {
+  margin: 25px;
+  height: 25px;
+  width: 200px;
+}
+
+.submit_button {
+  border-radius: 20px;
 }

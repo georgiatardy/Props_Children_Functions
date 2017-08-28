@@ -35,10 +35,10 @@ this.handleSubmit=this.handleSubmit.bind(this);
   }
   render() {
     return (
-      <div className="col-8">
+      <div className="column">
           <form action="">
             <div className="form-group">
-              <input onChange={this.handleInput} type="email" className="form-control" aria-describedby="text input" placeholder="Write something!"/>
+              <input onChange={this.handleInput} type="text" className="form" placeholder="Write something!"/>
             </div>
             <ChildComponent onClick={this.handleSubmit}/>
           </form>
